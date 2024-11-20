@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "category": "Wildlife Safaris",
+    "image": "https://i.ibb.co.com/GCXB7BC/2.jpg"
+  },
+  {
+    "id": 2,
+    "category": "Ocean Dives",
+    "image": "https://i.ibb.co.com/DDhHs0y/3.jpg"
+  },
+  {
+    "id": 3,
+    "category": "Forest Expeditions",
+    "image": "https://i.ibb.co.com/Rg6vWvY/6.jpg"
+  },
+  {
+    "id": 4,
+    "category": "Mangrove Forest",
+    "image": "https://i.ibb.co.com/FX03SWG/26.jpg"
+  },
+  {
+    "id": 5,
+    "category": "River Adventures",
+    "image": "https://i.ibb.co.com/jRgbG0v/12.jpg"
+  }
+]
