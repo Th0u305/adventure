@@ -1,4 +1,5 @@
 {
+  "homepage": ".",
   "name": "pain",
   "private": true,
   "version": "0.0.0",
