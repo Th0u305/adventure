@@ -1,6 +1,6 @@
 import Footer from "../Footer/Footer";
 import { Outlet } from "react-router-dom";
-import React, { useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Carrousel from "../Home/Carrousel";
 import toast, { Toaster } from "react-hot-toast";
@@ -10,27 +10,14 @@ import "flyonui/flyonui"
 import { AuthContext } from "../Context/ContextProvider";
 import CursorComponent from "./Cursor";
 
-
 const Root = () => {
   const { pathname } = useLocation();
   const [views, setViews] = useState(true);
   const {setViewWallet, setVieProfile, setViewSetting} = useContext(AuthContext)
 
-
-  const [showCursor, setShowCursor] = useState(false);
-
   useEffect(() => {
-    const isMouse = window.matchMedia("(pointer: fine)").matches;
-    const isLargeDevice = window.innerWidth >= 768;
+    sessionStorage.setItem("prevLocation", pathname);
 
-    if (isMouse && isLargeDevice) {
-      setShowCursor(true); // Enable cursor animation
-    } else {
-      setShowCursor(false); // Disable cursor animation
-    }
-  }, []);
-  
-  useEffect(() => {
     if (
       pathname === "/dashboard" ||
       pathname === "/login" ||
@@ -52,6 +39,7 @@ const Root = () => {
       setViewSetting(true)
     }
   }, [pathname]);
+  
 
   return (
     <div className=" ">
@@ -66,7 +54,6 @@ const Root = () => {
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
-     
     </div>
   );
 };

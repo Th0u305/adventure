@@ -6,18 +6,22 @@ import toast, { Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 
+
 const Login = () => {
   const { resetUserPassword, user, setUser, signInWithGoogle, signInUser , myRef} =
     useContext(AuthContext);
-
+  
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+
+  const prevLocation = sessionStorage.getItem("prevLocation") || "/";
+  
 
   const googlePopUp = () => {
     signInWithGoogle()
       .then((result) => {
         setUser(result.user);
-        navigate("/");
+        navigate(prevLocation);
       })
       .catch(() => {
         toast.error("Try Again");
@@ -38,7 +42,7 @@ const Login = () => {
       .then(() => {
         e.target.reset();
         toast.success("Successfully logged in!");
-        navigate("/");
+        navigate(prevLocation);
       })
       .catch(() => {
         toast.error("Invalid credentials. Password or Email");

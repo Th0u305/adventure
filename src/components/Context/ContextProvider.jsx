@@ -13,6 +13,7 @@ import { firebaseAuth } from "../firebase/firebase.config";
 export const AuthContext = createContext();
 const googleProvider = new GoogleAuthProvider();
 import { useRef } from 'react';
+import { useLocation } from "react-router-dom";
 
 const ContextProvider = ({ children }) => {
 
@@ -25,7 +26,6 @@ const ContextProvider = ({ children }) => {
   const [viewWallet, setViewWallet] = useState(false);
   const [viewProfile, setVieProfile] = useState(true);
   const [viewSetting, setViewSetting] = useState(false);
-  
   const myRef = useRef(null)
 
   useEffect(() => {

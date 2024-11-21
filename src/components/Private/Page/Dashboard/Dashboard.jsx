@@ -150,7 +150,7 @@ const Dashboard = () => {
 
   return (
     <div
-      className="flex lg:h-[170vh] 2xl:h-[120vh] lg:items-end p-8"
+      className="flex mt-12 mb-12 lg:items-end p-8"
       ref={myRef}
     >
       <Helmet>
