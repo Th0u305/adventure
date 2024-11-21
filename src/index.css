@@ -2,29 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-h1, h2, h3, h4{
-    font-family: playFair;
+h1,
+h2 {
+  font-family: playFair;
 }
 
-.p{
-    font-family: Montserrat;
-}
-
-label, btn{
-    font-family: sans-serif;
+label,
+btn {
+  font-family: sans-serif;
 }
 
 html {
-    --cursor-color: #4CAF50
-  }
-  
-  html.dark-mode {
-    --cursor-color: #fff
-  }
-    
+  --cursor-color: #4caf50;
+}
 
-  
+html.dark-mode {
+  --cursor-color: #fff;
+}

@@ -6,14 +6,14 @@ import { AuthContext } from "../Context/ContextProvider";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
-  const { loading, signOutUser, user } = useContext(AuthContext);
+  const {  signOutUser, user } = useContext(AuthContext);
   const { myRef } = useContext(AuthContext);
 
   const handleSignOutUser = () => {
     signOutUser()
       .then(() => {
         if (user) {
-          toast.success("Signed Out Succesfully");
+          toast.success("Signed Out Successfully");
         }
       })
       .catch(() => {
