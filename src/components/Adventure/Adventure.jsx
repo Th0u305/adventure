@@ -39,7 +39,7 @@ const Adventure = () => {
           ))}
         </div>
 
-        <div className="w-[90%] md:w-[80%] lg:w[70%] xl:w-[80%]">
+        <div className="w-[90%] md:w-[80%] lg:w[70%] xl:w-[80%] 2xl:w-[85%]">
           {<AdventuresData></AdventuresData>}
         </div>
       </div>

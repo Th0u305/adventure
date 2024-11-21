@@ -17,12 +17,12 @@ const AdventuresData = () => {
         {
           filteredData.length > 0 ?  filteredData.map((item) => (
             <div key={item.id} className="">
-              <div className="card group hover:shadow rounded-3xl h-full">
+              <div className="card group hover:shadow rounded-3xl h-full p-8">
                 <figure>
                   <img
                     src={item.image}
                     alt="Shoes"
-                    className="transition-transform duration-1000 group-hover:scale-110"
+                    className="rounded-3xl transition-transform duration-1000 group-hover:scale-110"
                   />
                 </figure>
                 <div className="card-body gap-4">

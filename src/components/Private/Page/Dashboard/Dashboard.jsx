@@ -18,13 +18,21 @@ import {
   EmailAuthProvider,
 } from "firebase/auth";
 import Swal from "sweetalert2";
+import Settings from "./DashboardPages/Settings";
 
 const Dashboard = () => {
-  const { loading, user, updateUserProfile, myRef } =
-    useContext(AuthContext);
-  const [viewWallet, setViewWallet] = useState(false);
-  const [viewProfile, setVieProfile] = useState(true);
-  const [viewSetting, setViewSetting] = useState(false);
+  const {
+    loading,
+    user,
+    updateUserProfile,
+    myRef,
+    viewSetting,
+    setViewSetting,
+    viewWallet,
+    setViewWallet,
+    viewProfile,
+    setVieProfile,
+  } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
@@ -93,7 +101,7 @@ const Dashboard = () => {
         }
       })
       .catch((err) => {
-        toast.error("Please try again")
+        toast.error("Please try again");
       });
   };
 
@@ -137,13 +145,14 @@ const Dashboard = () => {
       } catch (error) {
         toast.error("Please give correct credential");
       }
-    } else {
-      toast.error("No user logged in");
     }
   };
 
   return (
-    <div className="flex lg:h-[170vh] 2xl:h-[120vh] lg:items-end p-8" ref={myRef}>
+    <div
+      className="flex lg:h-[170vh] 2xl:h-[120vh] lg:items-end p-8"
+      ref={myRef}
+    >
       <Helmet>
         <title>EcoVenture | Dashboard</title>
       </Helmet>
@@ -305,25 +314,7 @@ const Dashboard = () => {
 
           {viewWallet && <Money></Money>}
           {viewSetting && (
-            <div className="flex justify-evenly items-center flex-col w-full col-span-2 bg-gray-100 rounded-2xl">
-              <div className="flex justify-center items-center flex-col gap-2">
-                <img
-                  className="w-40 h-36 rounded-full"
-                  src={user?.photoURL || avatarLogo}
-                  alt=""
-                />
-                <h1 className="text-2xl">{user.displayName || "John Doe"}</h1>
-                <p>{user?.email || "example@gmail.com"}</p>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => handleDeleteUser()}
-                className="w-[15em] mb-8 py-2.5 px-4 text-base btn btn-lg hover:scale-105 duration-300 ease-in-out tracking-wide rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none"
-              >
-                Delete Account
-              </button>
-            </div>
+            <Settings></Settings>
           )}
         </div>
       </div>

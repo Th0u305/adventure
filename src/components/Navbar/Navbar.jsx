@@ -4,10 +4,10 @@ import avatarLogo from "../../assets/man.gif";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/ContextProvider";
 import toast from "react-hot-toast";
-import "flyonui/flyonui"
+import "flyonui/flyonui";
 
 const Navbar = () => {
-  const {  signOutUser, user } = useContext(AuthContext);
+  const { signOutUser, user } = useContext(AuthContext);
   const { myRef } = useContext(AuthContext);
 
   const handleSignOutUser = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
               behavior: "smooth",
             })
           }
-          className="dropdown-item"
+          className="dropdown-item focus:bg-gray-300"
           to="/"
         >
           Home
@@ -44,39 +44,48 @@ const Navbar = () => {
               behavior: "smooth",
             })
           }
-          className="dropdown-item"
+          className="dropdown-item focus:bg-gray-300"
           to="adventure"
         >
           Adventures
         </Link>
       </li>
       <li>
-        <Link onClick={() =>
+        <Link
+          onClick={() =>
             myRef.current?.scrollIntoView({
               behavior: "smooth",
             })
           }
-         className="dropdown-item" to="ecoTips">
+          className="dropdown-item focus:bg-gray-300"
+          to="ecoTips"
+        >
           Eco-Tips
         </Link>
       </li>
       <li>
-        <Link  onClick={() =>
+        <Link
+          onClick={() =>
             myRef.current?.scrollIntoView({
               behavior: "smooth",
             })
           }
-        className="dropdown-item" to="about">
+          className="dropdown-item focus:bg-gray-300"
+          to="about"
+        >
           About Us
         </Link>
       </li>
       <li>
-        <Link onClick={() =>
+        <Link
+          onClick={() =>
             myRef.current?.scrollIntoView({
               behavior: "smooth",
             })
           }
-         className="dropdown-item" to="contact">
+          className="dropdown-item focus:bg-gray-300"
+          to="contact"
+        >
           Contact
         </Link>
       </li>
@@ -86,11 +95,11 @@ const Navbar = () => {
   const buttonLink = (
     <>
       <Link
-      onClick={() =>
-        myRef.current?.scrollIntoView({
-          behavior: "smooth",
-        })
-      }
+        onClick={() =>
+          myRef.current?.scrollIntoView({
+            behavior: "smooth",
+          })
+        }
         to="login"
         className="btn xl:w-36 md:h-10 bg-[#4CAF50] text-lg font-semibold text-white border-none hover:bg-[#2E7D32] hover:scale-110 ease-in-out	duration-300"
       >
@@ -101,8 +110,8 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <nav className="navbar xl:rounded-box fixed z-50 top-0 xl:top-15 shadow justify-between  lg:container mx-auto left-0 right-0">
-        <div className="navbar-start items-center w-full md:gap-8 lg:gap-0 md:w-[60%] md:justify-between lg:w-auto">
+      <nav className="navbar fixed z-50 top-0 xl:top-16 xl:rounded-full container right-0 left-0 mx-auto justify-between shadow-sm">
+        <div className="navbar-start items-center w-fit md:gap-8 lg:gap-0 md:w-[60%] md:justify-between lg:w-auto">
           <div className="dropdown relative inline-flex lg:hidden rtl:[--placement:bottom-end] items-center">
             <button
               id="dropdown-default"
@@ -126,11 +135,11 @@ const Navbar = () => {
           </div>
           <div className="flex justify-center items-center gap-1 md:gap-3">
             <a href="/">
-              <img className="w-15 md:w-20 lg:w-25" src={logo} alt="" />
+              <img className="w-15 md:w-20" src={logo} alt="" />
             </a>
             <a
               className="link text-base-content/90 link-neutral text-lg font-semibold no-underline"
-              href="#"
+              href="/"
             >
               EcoVenture
             </a>
@@ -186,22 +195,46 @@ const Navbar = () => {
                 <hr className="border-base-content/25 -mx-2 mb-3" />
               </li>
               <li>
-                <Link className="dropdown-item" to="dashboard">
+                <Link
+                  onClick={() =>
+                    myRef.current?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="dropdown-item"
+                  to="dashboard"
+                >
                   <span className="icon-[tabler--user]"></span>
                   My Profile
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item" to="/dashboard">
+                <Link
+                  onClick={() =>
+                    myRef.current?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="dropdown-item"
+                  to="/dashboard/setting"
+                >
                   <span className="icon-[tabler--settings]"></span>
                   Settings
                 </Link>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  <span className="icon-[tabler--receipt-rupee]"></span>
-                  Billing
-                </a>
+              <Link
+                  onClick={() =>
+                    myRef.current?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="dropdown-item"
+                  to="/dashboard/billing"
+                >
+                  <span className="icon-[tabler--settings]"></span>
+                  Billings
+                </Link>
               </li>
               <li>
                 <a className="dropdown-item" href="#">

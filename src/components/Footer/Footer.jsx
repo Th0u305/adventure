@@ -6,7 +6,7 @@ const Footer = () => {
   const {myRef} = useContext(AuthContext)
   
   return (
-    <div className=" bg-white p-10 space-y-5 mt-28" ref={myRef}>
+    <div className=" bg-white p-10 space-y-5" ref={myRef}>
       <div className="text-center space-y-5">
         <h1 className="text-5xl font-semibold">
         </h1>

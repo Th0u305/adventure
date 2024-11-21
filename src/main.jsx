@@ -10,7 +10,6 @@ import EcoTips from "./components/Adventure/EcoTips";
 import About from "./components/About/About";
 import Contact from "./components/About/Contact";
 import PrivateRoute from "./components/Private/PrivateRoute";
-import Profile from "./components/Private/Page/Profile";
 import Dashboard from "./components/Private/Page/Dashboard/Dashboard";
 import ContextProvider from "./components/Context/ContextProvider";
 import Login from "./components/Private/Login";
@@ -18,6 +17,9 @@ import Register from "./components/Private/Register";
 import SinglePages from "./components/Adventure/SinglePages";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import "flyonui/flyonui"
+import Money from "./components/Private/Page/Dashboard/DashboardPages/Money";
+import Settings from "./components/Private/Page/Dashboard/DashboardPages/Settings";
+import AnimatedCursor from "react-animated-cursor";
 
 const router = createBrowserRouter([
   {
@@ -58,20 +60,22 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "profile",
-        element: (
-          <PrivateRoute>
-            <Profile></Profile>
-          </PrivateRoute>
-        ),
-      },
-      {
         path: "dashboard",
         element: (
           <PrivateRoute>
             <Dashboard></Dashboard>
           </PrivateRoute>
         ),
+        children:[
+          {
+            path:"/dashboard/billing",
+            element:<PrivateRoute><Money></Money> </PrivateRoute>
+          },
+          {
+            path:"/dashboard/setting",
+            element:<PrivateRoute><Settings></Settings></PrivateRoute>
+          }
+        ]
       },
     ],
   },
