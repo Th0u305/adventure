@@ -17,7 +17,6 @@ const Money = () => {
     const all = JSON.parse(data);
     setMoney(all);
   }, []);
-  console.log(money.adventureCost);
   
 
   const addCardInfo = (e) => {
