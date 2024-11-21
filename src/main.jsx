@@ -17,6 +17,7 @@ import Login from "./components/Private/Login";
 import Register from "./components/Private/Register";
 import SinglePages from "./components/Adventure/SinglePages";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import "flyonui/flyonui"
 
 const router = createBrowserRouter([
   {

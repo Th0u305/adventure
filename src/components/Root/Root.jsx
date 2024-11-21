@@ -7,6 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../Navbar/Navbar";
 import AnimatedCursor from "react-animated-cursor";
+import "flyonui/flyonui"
 
 
 const Root = () => {
