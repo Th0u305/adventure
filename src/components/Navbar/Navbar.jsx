@@ -202,7 +202,7 @@ const Navbar = () => {
                     })
                   }
                   className="dropdown-item"
-                  to="dashboard"
+                  to="dashboard/profile"
                 >
                   <span className="icon-[tabler--user]"></span>
                   My Profile

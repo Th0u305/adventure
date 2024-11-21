@@ -28,6 +28,12 @@ const Root = () => {
       setViews(true);
     }
 
+    if (pathname === "/dashboard/profile") {
+      setViewWallet(false)
+      setVieProfile(true)
+      setViewSetting(false)
+    }
+
     if (pathname === "/dashboard/billing") {
       setViewWallet(true)
       setVieProfile(false)

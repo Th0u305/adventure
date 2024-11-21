@@ -20,6 +20,7 @@ import "flyonui/flyonui"
 import Money from "./components/Private/Page/Dashboard/DashboardPages/Money";
 import Settings from "./components/Private/Page/Dashboard/DashboardPages/Settings";
 import AnimatedCursor from "react-animated-cursor";
+import Profile from "./components/Private/Page/Dashboard/DashboardPages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
           {
             path:"/dashboard/billing",
             element:<PrivateRoute><Money></Money> </PrivateRoute>
+          },
+          {
+            path:"/dashboard/profile",
+            element:<PrivateRoute><Profile></Profile></PrivateRoute>
           },
           {
             path:"/dashboard/setting",

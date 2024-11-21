@@ -1,13 +1,18 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../../Context/ContextProvider';
+import { Helmet } from "react-helmet-async";
 
-const Settings = () => {
+
+const Settings = ({handleDeleteUser}) => {
     const {user}= useContext(AuthContext)
     return (
-        <div className="flex justify-evenly items-center flex-col w-full col-span-2 bg-gray-100 rounded-2xl">
+        <div className="flex h-full justify-evenly items-center flex-col w-full col-span-2 bg-gray-100 rounded-2xl">
+              <Helmet>
+        <title>EcoVenture | Dashboard/setting</title>
+      </Helmet>
               <div className="flex justify-center items-center flex-col gap-2">
                 <img
-                  className="w-40 h-36 rounded-full"
+                  className="w-28 h-28 rounded-full"
                   src={user?.photoURL || avatarLogo}
                   alt=""
                 />
