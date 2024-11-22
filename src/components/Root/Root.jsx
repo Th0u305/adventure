@@ -6,7 +6,7 @@ import Carrousel from "../Home/Carrousel";
 import toast, { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../Navbar/Navbar";
-import "flyonui/flyonui"
+// import "flyonui/flyonui"
 import { AuthContext } from "../Context/ContextProvider";
 import CursorComponent from "./Cursor";
 

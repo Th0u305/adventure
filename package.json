@@ -11,9 +11,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "cssnano": "^7.0.6",
     "firebase": "^11.0.2",
+    "flowbite": "^2.5.2",
     "flowbite-react": "^0.10.2",
     "flyonui": "^1.1.0",
     "localforage": "^1.10.0",

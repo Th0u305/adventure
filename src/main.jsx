@@ -16,7 +16,7 @@ import Login from "./components/Private/Login";
 import Register from "./components/Private/Register";
 import SinglePages from "./components/Adventure/SinglePages";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import "flyonui/flyonui"
+// import "flyonui/flyonui"
 import Money from "./components/Private/Page/Dashboard/DashboardPages/Money";
 import Settings from "./components/Private/Page/Dashboard/DashboardPages/Settings";
 import Profile from "./components/Private/Page/Dashboard/DashboardPages/Profile";

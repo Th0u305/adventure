@@ -109,9 +109,9 @@ const Navbar = () => {
   );
 
   return (
-    <nav class="navbar xl:rounded-full fixed z-50 top-0 xl:top-15 shadow justify-between lg:container mx-auto left-0 right-0">
+    <nav class="navbar xl:rounded-full fixed z-50 top-0 xl:top-15 shadow justify-between lg:container mx-auto left-0 right-0 lg:px-12">
       <div class="navbar-start w-full lg:w-fit">
-        <div className="flex justify-between items-center gap-1 md:gap-3 w-[90%] lg:w-auto">
+        <div className="flex justify-between items-center w-[90%] lg:w-auto">
           <div class="dropdown relative inline-flex lg:hidden rtl:[--placement:bottom-end]">
             <button
               id="dropdown-default"
@@ -121,8 +121,8 @@ const Navbar = () => {
               aria-expanded="false"
               aria-label="Dropdown"
             >
-              <span class="icon-[tabler--menu-2] dropdown-open:hidden size-8"></span>
-              <span class="icon-[tabler--x] dropdown-open:block hidden size-8"></span>
+              <span class="icon-[tabler--menu-2] dropdown-open:hidden size-7"></span>
+              <span class="icon-[tabler--x] dropdown-open:block hidden size-7"></span>
             </button>
             <ul
               class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 border-2 border-black"
@@ -133,7 +133,7 @@ const Navbar = () => {
               {navMenu}
             </ul>
           </div>
-          <div className="flex flex-row justify-center items-center">
+          <div className="flex flex-row justify-center items-center gap-2 md:gap-5">
             <a href="/">
               <img className="w-15 md:w-16" src={logo} alt="" />
             </a>
@@ -150,7 +150,7 @@ const Navbar = () => {
         <ul class="menu menu-horizontal p-0 font-medium text-lg xl:text-xl">{navMenu}</ul>
       </div>
       <div class="navbar-end items-center gap-4 lg:w-fit">
-        <div class="flex flex-row justify-center items-center gap-5" href="#">
+        <div class="flex flex-row justify-center items-center gap-2 md:gap-5" href="#">
           {buttonLink}
           <div className="dropdown relative inline-flex [--auto-close:inside] [--offset:8] [--placement:bottom-end]">
             <button
