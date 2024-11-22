@@ -19,3 +19,6 @@ html {
 html.dark-mode {
   --cursor-color: #fff;
 }
+.dropdown-menu {
+  z-index: 1050 !important; /* Adjust stacking order */
+}

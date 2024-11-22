@@ -6,6 +6,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/flyonui/dist/js/*.js",
+    "./node_modules/flowbite/**/*.js",
     flowbite.content(),
 
   ],
@@ -22,6 +23,8 @@ export default {
     require("flyonui"),
     require("flyonui/plugin") ,
     flowbite.plugin(),
+    require('flowbite/plugin')
+
   ],
 }
 

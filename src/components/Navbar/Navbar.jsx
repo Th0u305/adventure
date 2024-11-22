@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/ContextProvider";
 import toast from "react-hot-toast";
 import "flyonui/flyonui";
-import "flyonui/flyonui";
 
 const Navbar = () => {
   const { signOutUser, user } = useContext(AuthContext);
@@ -151,7 +150,7 @@ const Navbar = () => {
         <ul class="menu menu-horizontal p-0 font-medium text-lg xl:text-xl">{navMenu}</ul>
       </div>
       <div class="navbar-end items-center gap-4 lg:w-fit">
-        <div class="flex flex-row justify-center items-center" href="#">
+        <div class="flex flex-row justify-center items-center gap-5" href="#">
           {buttonLink}
           <div className="dropdown relative inline-flex [--auto-close:inside] [--offset:8] [--placement:bottom-end]">
             <button
@@ -253,8 +252,7 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-          </div>
-          {/* <span class="icon-[tabler--arrow-right]"></span> */}
+          </div>  
         </div>
       </div>
     </nav>

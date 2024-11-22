@@ -19,7 +19,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import "flyonui/flyonui"
 import Money from "./components/Private/Page/Dashboard/DashboardPages/Money";
 import Settings from "./components/Private/Page/Dashboard/DashboardPages/Settings";
-import AnimatedCursor from "react-animated-cursor";
 import Profile from "./components/Private/Page/Dashboard/DashboardPages/Profile";
 
 const router = createBrowserRouter([

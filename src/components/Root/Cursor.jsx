@@ -6,7 +6,7 @@ const CursorComponent = () => {
 
   useEffect(() => {
     const isMouse = window.matchMedia("(pointer: fine)").matches;
-    const isLargeDevice = window.innerWidth >= 1200;
+    const isLargeDevice = window.innerWidth >= 1000;
 
     if (isMouse && isLargeDevice) {
       setShowCursor(true); 
