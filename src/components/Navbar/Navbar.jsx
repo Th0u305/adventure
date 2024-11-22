@@ -109,7 +109,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav class="navbar xl:rounded-full fixed z-50 top-0 xl:top-15 shadow justify-between lg:container mx-auto left-0 right-0 lg:px-12">
+    <nav class="navbar xl:rounded-full xl:fixed z-50 top-0 xl:top-15 shadow justify-between lg:container mx-auto left-0 right-0 lg:px-12">
       <div class="navbar-start w-full lg:w-fit">
         <div className="flex justify-between items-center w-[90%] lg:w-auto">
           <div class="dropdown relative inline-flex lg:hidden rtl:[--placement:bottom-end]">

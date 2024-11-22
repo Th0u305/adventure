@@ -9,7 +9,7 @@ import { Carousel } from "flowbite-react";
 
 const Carrousel = () => {
   return (
-    <div className="h-64 md:h-96 lg:h-[30rem] xl:h-[60rem] relative bg-[#00000036] pointer-events-none mt-20 md:mt-20 xl:mt-0">
+    <div className="h-64 md:h-96 lg:h-[30rem] xl:h-[60rem] relative bg-[#00000036] pointer-events-none ">
       <Carousel leftControl="." rightControl="." className="mix-blend-multiply">
         <img src={pic1} alt="..." />
         <img src={pic2} alt="..." />
