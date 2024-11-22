@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../Navbar/Navbar";
 // import "flyonui/flyonui"
 import { AuthContext } from "../Context/ContextProvider";
-import CursorComponent from "./Cursor";
+// import CursorComponent from "./Cursor";
 
 const Root = () => {
   const { pathname } = useLocation();
@@ -54,7 +54,7 @@ const Root = () => {
       </Helmet>
       <Toaster />
       <Navbar></Navbar>
-      <CursorComponent></CursorComponent>
+      {/* <CursorComponent></CursorComponent> */}
       {views && <Carrousel></Carrousel>}
       <div className="container mx-auto">
         <Outlet></Outlet>
