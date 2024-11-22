@@ -13,14 +13,19 @@ import { firebaseAuth } from "../firebase/firebase.config";
 export const AuthContext = createContext();
 const googleProvider = new GoogleAuthProvider();
 import { useRef } from 'react';
+import { useLocation } from "react-router-dom";
+
 const ContextProvider = ({ children }) => {
+
   const [category, setCategory] = useState([]);
   const [allData, setAllData] = useState([]);
   const [filteredData, setFilteredData] = useState(allData);
   const [singleData, setSingleData] = useState([]);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  
+  const [viewWallet, setViewWallet] = useState(false);
+  const [viewProfile, setVieProfile] = useState(true);
+  const [viewSetting, setViewSetting] = useState(false);
   const myRef = useRef(null)
 
   useEffect(() => {
@@ -105,7 +110,13 @@ const ContextProvider = ({ children }) => {
     createUser,
     updateUserProfile,
     resetUserPassword,
-    myRef
+    myRef,
+    viewProfile,
+    setVieProfile,
+    viewWallet,
+    setViewWallet,
+    viewSetting,
+    setViewSetting
   };
 
   return (

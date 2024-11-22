@@ -57,6 +57,25 @@ const SinglePages = () => {
       navigate("/login");
     } else {
       if (currentHour >= 10 && currentHour < 20) {
+        Swal.fire({
+          icon: "success",
+          title: "Thank you for choosing us",
+          text: "Your adventure cost added to the billing",
+          showClass: {
+            popup: `
+              animate__animated
+              animate__fadeInUp
+              animate__faster
+            `
+          },
+          hideClass: {
+            popup: `
+              animate__animated
+              animate__fadeOutDown
+              animate__faster
+            `
+          }
+        });
         window.open("https://meet.google.com", "_blank");
       } else {
         Swal.fire({
@@ -105,12 +124,12 @@ const SinglePages = () => {
         </div>
       </div>
       <div key={id} className="w-[85%] md:w-[70%] xl:w-[60%] mx-auto">
-        <div className="card group hover:shadow rounded-3xl h-full p-6 xl:p-12">
+        <div className="card group hover:shadow h-full p-6 xl:p-12 rounded-3xl">
           <figure>
             <img
               src={image}
               alt="Shoes"
-              className="transition-transform duration-1000 group-hover:scale-110 w-fit"
+              className="transition-transform duration-1000 group-hover:scale-110 w-fit rounded-3xl"
             />
           </figure>
           <div className="card-body gap-4 space-y-5">

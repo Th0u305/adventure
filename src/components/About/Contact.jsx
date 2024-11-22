@@ -25,7 +25,7 @@ const Contact = () => {
    
   }
   return (
-    <section className="bg-[#37474F] dark:bg-gray-900 mt-28 rounded-2xl w-[87%] mx-auto" ref={myRef}>
+    <section className="bg-[#37474F] dark:bg-gray-900 mt-28 mb-28 rounded-2xl w-[87%] mx-auto" ref={myRef}>
       <Helmet>
         <title>EcoVenture | Contact</title>
       </Helmet>

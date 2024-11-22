@@ -44,12 +44,12 @@ const Home = () => {
       <div className="grid grid-rows-1 xl:grid-cols-3 gap-12 md:mt-0 mb-14 p-10 lg:p-15 xl:p-0">
         {slicedData.map((item) => (
           <div key={item.id} data-aos={item.fade} className="">
-            <div className="card group hover:shadow rounded-3xl h-full p-8">
+            <div className="card group hover:shadow h-full p-8 rounded-3xl">
               <figure>
                 <img
                   src={item.image}
                   alt="Shoes"
-                  className="transition-transform duration-1000 group-hover:scale-110 w-fit rounded-3xl"
+                  className="rounded-3xl transition-transform duration-1000 group-hover:scale-110 w-fit"
                 />
               </figure>
               <div className="card-body gap-4 space-y-5">

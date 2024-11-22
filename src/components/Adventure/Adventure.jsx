@@ -27,7 +27,7 @@ const Adventure = () => {
         </p>
       </div>
       <div className="flex flex-col xl:flex-row gap-8 xl:gap-0 items-center justify-between xl:items-start">
-        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-1 grid-rows-1 gap-5 md:w-[80%] xl:w-fit">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-1 grid-rows-1 gap-5 md:w-[80%] xl:w-fit p-4 text-center">
           {category.map((item) => (
             <NavLink
               key={item.id}
@@ -39,7 +39,7 @@ const Adventure = () => {
           ))}
         </div>
 
-        <div className="w-[90%] md:w-[80%] lg:w[70%] xl:w-[80%]">
+        <div className="w-[90%] md:w-[80%] lg:w[70%] xl:w-[80%] 2xl:w-[85%]">
           {<AdventuresData></AdventuresData>}
         </div>
       </div>

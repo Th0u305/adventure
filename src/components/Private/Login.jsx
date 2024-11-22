@@ -6,18 +6,22 @@ import toast, { Toaster } from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 
+
 const Login = () => {
   const { resetUserPassword, user, setUser, signInWithGoogle, signInUser , myRef} =
     useContext(AuthContext);
-
+  
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+
+  const prevLocation = sessionStorage.getItem("prevLocation") || "/";
+  
 
   const googlePopUp = () => {
     signInWithGoogle()
       .then((result) => {
         setUser(result.user);
-        navigate("/");
+        navigate(prevLocation);
       })
       .catch(() => {
         toast.error("Try Again");
@@ -38,7 +42,7 @@ const Login = () => {
       .then(() => {
         e.target.reset();
         toast.success("Successfully logged in!");
-        navigate("/");
+        navigate(prevLocation);
       })
       .catch(() => {
         toast.error("Invalid credentials. Password or Email");
@@ -59,11 +63,11 @@ const Login = () => {
   };
 
   return (
-    <div className="font-[sans-serif] pt-40 p-8" ref={myRef}>
+    <div className="font-[sans-serif] p-8" ref={myRef}>
       <Helmet>
         <title>EcoVenture | Login</title>
       </Helmet>
-      <div className="min-h-screen flex flex-col items-center justify-center">
+      <div className="min-h-screen flex flex-col items-center justify-end md:justify-center xl:justify-end ">
         <div className="bg-white grid md:grid-cols-2 items-center gap-4 max-md:gap-8 max-w-6xl max-md:max-w-lg w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
           <div className="md:max-w-md w-full px-4 py-4">
             <form onSubmit={handleLogin}>

@@ -1,20 +1,23 @@
 import Footer from "../Footer/Footer";
 import { Outlet } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Carrousel from "../Home/Carrousel";
 import toast, { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../Navbar/Navbar";
-import AnimatedCursor from "react-animated-cursor";
 import "flyonui/flyonui"
-
+import { AuthContext } from "../Context/ContextProvider";
+import CursorComponent from "./Cursor";
 
 const Root = () => {
   const { pathname } = useLocation();
   const [views, setViews] = useState(true);
-  
+  const {setViewWallet, setVieProfile, setViewSetting} = useContext(AuthContext)
+
   useEffect(() => {
+    sessionStorage.setItem("prevLocation", pathname);
+
     if (
       pathname === "/dashboard" ||
       pathname === "/login" ||
@@ -24,35 +27,39 @@ const Root = () => {
     } else {
       setViews(true);
     }
+
+    if (pathname === "/dashboard/profile") {
+      setViewWallet(false)
+      setVieProfile(true)
+      setViewSetting(false)
+    }
+
+    if (pathname === "/dashboard/billing") {
+      setViewWallet(true)
+      setVieProfile(false)
+      setViewSetting(false)
+    }
+    if (pathname === "/dashboard/setting") {
+      setViewWallet(false)
+      setVieProfile(false)
+      setViewSetting(true)
+    }
   }, [pathname]);
+  
 
   return (
-    <div className=" relative pt-[5rem] md:pt-[6.5rem] lg:pt-[7.8rem] xl:pt-0">
-            <AnimatedCursor
-        innerSize={8}
-        outerSize={35}
-        innerScale={1}
-        outerScale={2}
-        outerAlpha={0}
-        hasBlendMode={true}
-        innerStyle={{
-          backgroundColor: "var(--cursor-color)",
-        }}
-        outerStyle={{
-          border: "3px solid var(--cursor-color)",
-        }}
-      />
+    <div className=" ">
       <Helmet>
         <title>EcoVenture | Home</title>
       </Helmet>
       <Toaster />
       <Navbar></Navbar>
+      <CursorComponent></CursorComponent>
       {views && <Carrousel></Carrousel>}
       <div className="container mx-auto">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
-     
     </div>
   );
 };

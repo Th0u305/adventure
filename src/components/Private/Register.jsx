@@ -53,7 +53,7 @@ const Register = () => {
 
  
   return (
-    <div className="flex items-center md:h-screen p-4 pt-[35vh]" ref={myRef}>
+    <div className="flex p-4 min-h-screen flex-col items-center justify-end" ref={myRef}>
         <Helmet>
         <title>EcoVenture | Register</title>
       </Helmet>
