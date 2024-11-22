@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/ContextProvider";
 import toast from "react-hot-toast";
 import "flyonui/flyonui";
+import "flyonui/flyonui";
 
 const Navbar = () => {
   const { signOutUser, user } = useContext(AuthContext);
