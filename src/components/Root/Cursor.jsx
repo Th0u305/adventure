@@ -4,16 +4,16 @@ import { useState, useEffect } from "react";
 const CursorComponent = () => {
   const [showCursor, setShowCursor] = useState(false);
 
-  useEffect(() => {
-    const isMouse = window.matchMedia("(pointer: fine)").matches;
-    const isLargeDevice = window.innerWidth >= 1000;
+  // useEffect(() => {
+  //   const isMouse = window.matchMedia("(pointer: fine)").matches;
+  //   const isLargeDevice = window.innerWidth >= 1000;
 
-    if (isMouse && isLargeDevice) {
-      setShowCursor(true); 
-    } else {
-      setShowCursor(false); 
-    }
-  }, []);
+  //   if (isMouse && isLargeDevice) {
+  //     setShowCursor(true); 
+  //   } else {
+  //     setShowCursor(false); 
+  //   }
+  // }, []);
 
   return showCursor ? (
             <AnimatedCursor
