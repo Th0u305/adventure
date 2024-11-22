@@ -15,6 +15,15 @@ const Root = () => {
   const [views, setViews] = useState(true);
   const {setViewWallet, setVieProfile, setViewSetting} = useContext(AuthContext)
 
+  
+  useEffect(() => {
+    const loadFlyonui = async () => {
+      await import('flyonui/flyonui');
+      window.HSStaticMethods.autoInit();
+    };
+    loadFlyonui();
+  }, [location.pathname]);
+
   useEffect(() => {
     sessionStorage.setItem("prevLocation", pathname);
 
