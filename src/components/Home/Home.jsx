@@ -10,7 +10,7 @@ import { CiMoneyBill } from "react-icons/ci";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { SiLevelsdotfyi } from "react-icons/si";
 import { Helmet } from "react-helmet-async";
-
+import "flyonui/flyonui"
 
 AOS.init();
 const Home = () => {

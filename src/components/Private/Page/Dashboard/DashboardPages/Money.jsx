@@ -2,10 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../../../Context/ContextProvider";
 import Swal from "sweetalert2";
+import "flyonui/flyonui"
 
 
 const Money = () => {
-  const [money, setMoney] = useState([]);
+  const [money, setMoney] = useState(0);
   const [errorMessage, setErrorMessage] = useState("");
   const [errorMessage2, setErrorMessage2] = useState("");
   const [errorMessage3, setErrorMessage3] = useState("");
@@ -54,7 +55,7 @@ const Money = () => {
   return (
     <div>
       <div className="w-[70%] mx-auto">
-        <h3 className="text-lg font-semibold mb-4">Adventure Cost: {money.adventureCost} </h3>
+        <h3 className="text-lg font-semibold mb-4">Adventure Cost: {money?.adventureCost || 0} </h3>
       </div>
       <div class="w-full max-w-lg mx-auto p-8">
         <div class="bg-white rounded-lg shadow-lg p-6">
