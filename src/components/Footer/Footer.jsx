@@ -7,7 +7,7 @@ const Footer2 = () => {
   const {myRef} = useContext(AuthContext)
   
   return (
-    <div className=" bg-white mt-28" ref={myRef}>
+    <div className=" bg-white  mt-12 lg:mt-28 shadow" ref={myRef}>
     <footer class="footer footer-center  rounded p-6">
   <nav class="grid grid-flow-col gap-4 text-base-content/90">
     <a href="/about" class="link link-hover text-xl">About</a>

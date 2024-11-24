@@ -25,11 +25,11 @@ const Home = () => {
   };
 
   return (
-    <div className="mt-28" id="home" ref={myRef}>
+    <div className=" mt-12 md:mt-28" id="home" ref={myRef}>
       <Helmet>
         <title>EcoVenture | Home</title>
       </Helmet>
-      <div className="">
+      <div className="p-5">
         <h1 className="text-3xl lg:text-5xl font-semibold text-center">
           Adventures for Every Explorer
         </h1>
@@ -39,7 +39,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="grid grid-rows-1 xl:grid-cols-3 gap-12 md:mt-0 mb-14 p-10 lg:p-15 xl:p-0">
+      <div className="grid grid-rows-1 md:grid-cols-2 xl:grid-cols-3 gap-12 md:mt-0 mb-5 md:mb-12 p-10 lg:p-15 xl:p-0">
         {slicedData.map((item) => (
           <div key={item.id} data-aos={item.fade} className="">
             <div className="card group hover:shadow h-full p-8 rounded-3xl">
@@ -75,7 +75,7 @@ const Home = () => {
                   Adventure Level: {item.adventureLevel}
                 </p>
               </div>
-              <div className="flex justify-center items-center mb-14">
+              <div className="flex justify-center items-center mt-5 mb-5">
                 <div className="card-actions justify-center items-center5">
                   <NavLink
                       onClick={() => singlePageData(item)}
@@ -90,7 +90,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center items-center mb-14">
+      <div className="flex justify-center items-center mb-12 ">
         <NavLink
           to="adventure"
           className="btn hover:scale-110 ease-in-out	duration-300 w-[15em] h-16 bg-[#4CAF50] text-lg font-semibold text-white border-none hover:bg-[#2E7D32]"

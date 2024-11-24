@@ -131,7 +131,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav id="navbar" className={scrolling ? 'navbar-scroll navbar shadow duration-700' : 
+    <nav id="navbar" className={scrolling ? 'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between h-fit w-screen left-0 right-0 transition-all duration-500 shadow' : 
                      'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between h-fit w-screen left-0 right-0 transition-all duration-500 bg-black'}>
         <div className="navbar-start  justify-between items-center lg:w-auto w-[60%]">
           <div className="dropdown relative inline-flex lg:hidden rtl:[--placement:bottom-end]">

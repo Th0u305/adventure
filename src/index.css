@@ -20,17 +20,3 @@ html.dark-mode {
   --cursor-color: #fff;
 }
 
-.navbar-scroll {
-  background-color: white; 
-  top: 0;
-  right: 0;
-  left: 0;
-  position: fixed;
-  justify-content: space-between;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  z-index: 50;
-  padding: 1.5rem;
-}
-
