@@ -13,7 +13,7 @@ const EcoTips = () => {
       <h1 className="text-3xl lg:text-5xl font-semibold text-center">
         General & Eco-Friendly Adventure Tips
       </h1>
-      <div className="accordion accordion-bordered w-[85%] mx-auto mt-20">
+      <div className="accordion accordion-bordered w-[85%] mx-auto mt-12">
         <div className="accordion-item active" id="payment-bordered">
           <button
             className="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start"

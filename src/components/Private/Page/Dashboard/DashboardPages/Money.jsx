@@ -57,8 +57,8 @@ const Money = () => {
       <div className="w-[70%] mx-auto">
         <h3 className="text-lg font-semibold mb-4">Adventure Cost: {money?.adventureCost || 0} </h3>
       </div>
-      <div class="w-full max-w-lg mx-auto p-8">
-        <div class="bg-white rounded-lg shadow-lg p-6">
+      <div class="w-full max-w-lg mx-auto ">
+        <div class="bg-white rounded-lg shadow-md p-6">
           <h2 class="text-3xl font-medium mb-6">Payment Information</h2>
           <form onSubmit={addCardInfo}>
             <div class="grid grid-cols-2 gap-6">

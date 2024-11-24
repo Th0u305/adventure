@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../../assets/map.png";
-import avatarLogo from "../../assets/man.gif";
+import avatarLogo from "../../assets/face.gif";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/ContextProvider";
 import toast from "react-hot-toast";
@@ -22,6 +22,28 @@ const Navbar = () => {
       });
   };
 
+
+  const [scrolling, setScrolling] = useState(false);
+  const [scrolling2, setScrolling2] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY > 30) {
+      setScrolling(true);
+      setScrolling2(true);
+    } else {
+      setScrolling(false);
+      setScrolling2(false);
+    }
+
+  }
+
+
+
   const navMenu = (
     <>
       <li>
@@ -31,7 +53,7 @@ const Navbar = () => {
               behavior: "smooth",
             })
           }
-          className="dropdown-item focus:bg-gray-300"
+          className={scrolling2 ? "dropdown-item  text-base-content/90 focus:bg-gray-300" : "dropdown-item  lg:text-white focus:bg-gray-300"}
           to="/"
         >
           Home
@@ -44,7 +66,7 @@ const Navbar = () => {
               behavior: "smooth",
             })
           }
-          className="dropdown-item focus:bg-gray-300"
+          className={scrolling2 ? "text-base-content/90 focus:bg-gray-300 dropdown-item " : "dropdown-item  lg:text-white focus:bg-gray-300"}
           to="adventure"
         >
           Adventures
@@ -57,7 +79,7 @@ const Navbar = () => {
               behavior: "smooth",
             })
           }
-          className="dropdown-item focus:bg-gray-300"
+          className={scrolling2 ? "text-base-content/90 focus:bg-gray-300 dropdown-item " : "lg:text-white focus:bg-gray-300 dropdown-item "}
           to="ecoTips"
         >
           Eco-Tips
@@ -70,7 +92,7 @@ const Navbar = () => {
               behavior: "smooth",
             })
           }
-          className="dropdown-item focus:bg-gray-300"
+          className={scrolling2 ? "text-base-content/90 focus:bg-gray-300 dropdown-item " : "lg:text-white focus:bg-gray-300 dropdown-item "}
           to="about"
         >
           About Us
@@ -83,7 +105,7 @@ const Navbar = () => {
               behavior: "smooth",
             })
           }
-          className="dropdown-item focus:bg-gray-300"
+          className={scrolling2 ? "text-base-content/90 focus:bg-gray-300 dropdown-item " : "lg:text-white focus:bg-gray-300 dropdown-item "}
           to="contact"
         >
           Contact
@@ -109,9 +131,9 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="navbar xl:rounded-full fixed z-50 top-0 xl:top-15 shadow justify-between lg:container mx-auto left-0 right-0 lg:px-12">
-      <div className="navbar-start w-full lg:w-fit">
-        <div className="flex justify-between items-center w-[90%] lg:w-auto">
+    <nav id="navbar" className={scrolling ? 'navbar-scroll navbar shadow duration-700' : 
+                     'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between h-fit w-screen left-0 right-0 transition-all duration-500 bg-black'}>
+        <div className="navbar-start  justify-between items-center lg:w-auto w-[60%]">
           <div className="dropdown relative inline-flex lg:hidden rtl:[--placement:bottom-end]">
             <button
               id="dropdown-default"
@@ -121,11 +143,11 @@ const Navbar = () => {
               aria-expanded="false"
               aria-label="Dropdown"
             >
-              <span className="icon-[tabler--menu-2] dropdown-open:hidden size-7"></span>
-              <span className="icon-[tabler--x] dropdown-open:block hidden size-7"></span>
+              <span className={scrolling ? "icon-[tabler--menu-2] dropdown-open:hidden size-7" : "icon-[tabler--menu-2] dropdown-open:hidden text-white size-7"}></span>
+              <span className={scrolling ? "icon-[tabler--x] dropdown-open:block hidden size-7" : "icon-[tabler--x] dropdown-open:block hidden text-white size-7"}></span>
             </button>
             <ul
-              className="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 border-2 border-black"
+              className="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 border-2 border-black "
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="dropdown-default"
@@ -138,18 +160,18 @@ const Navbar = () => {
               <img className="w-15 md:w-16" src={logo} alt="" />
             </a>
             <a
-              className="link text-base-content/90 link-neutral text-lg font-semibold no-underline"
+            
+              className={scrolling2 ? "text-base-content/90 focus:bg-gray-300 link-neutral text-lg font-semibold no-underline" : "text-white focus:bg-gray-300 link-neutral text-lg font-semibold no-underline"}
               href="/"
             >
               EcoVenture
             </a>
           </div>
-        </div>
       </div>
       <div className="navbar-center max-lg:hidden">
-        <ul className="menu menu-horizontal p-0 font-medium text-lg xl:text-xl">{navMenu}</ul>
+        <ul className="menu menu-horizontal p-0 font-medium text-lg xl:text-xl bg-inherit">{navMenu}</ul>
       </div>
-      <div className="navbar-end items-center gap-4 lg:w-fit">
+      <div className="navbar-end items-center gap-4 w-fit lg:w-fit ">
         <div className="flex flex-row justify-center items-center gap-2 md:gap-5" href="#">
           {buttonLink}
           <div className="dropdown relative inline-flex [--auto-close:inside] [--offset:8] [--placement:bottom-end]">
@@ -162,8 +184,8 @@ const Navbar = () => {
               aria-label="Dropdown"
             >
               <div className="avatar">
-                <div className="size-12 md:size-16 rounded-full">
-                  <img src={user?.photoURL || avatarLogo} alt="avatar 1" />
+                <div className={scrolling ? `size-10 md:size-12 border-2 border-black ${user ? "p-0" : "p-3"} rounded-full` : `size-10 md:size-12 border-2 border-white ${user ? "p-0" : "p-3"} rounded-full`}>
+                  <img src={user?.photoURL || avatarLogo} className="" alt="avatar 1" />
                 </div>
               </div>
             </button>

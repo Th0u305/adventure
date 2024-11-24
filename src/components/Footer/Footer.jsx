@@ -2,41 +2,38 @@ import { useState } from "react";
 import { AuthContext } from "../Context/ContextProvider";
 import { useContext } from "react";
 
-const Footer = () => {
+
+const Footer2 = () => {
   const {myRef} = useContext(AuthContext)
   
   return (
-    <div className=" bg-white p-10 space-y-5" ref={myRef}>
-      <div className="text-center space-y-5">
-        <h1 className="text-5xl font-semibold">
-        </h1>
-        <p className="text-gray-600 ">
-        </p>
-        <div className="divider w-[90%] md:w-[80%] xl:w-[70%] mx-auto"></div>
-        </div>
-      <footer className="footer items-center justify-evenly">
-        <nav>
-          <h6 className="footer-title text-lg text-black">Services</h6>
-          <a className="link link-hover text-lg text-gray-600">Product Support</a>
-          <a className="link link-hover text-lg text-gray-600"> Order Tracking</a>
-          <a className="link link-hover text-lg text-gray-600"> Shipping & Delivery</a>
-          <a className="link link-hover text-lg text-gray-600"> Returns</a>
-        </nav>
-        <nav>
-          <h6 className="footer-title text-lg text-black">Company</h6>
-          <a className="link link-hover text-lg text-gray-600">About us</a>
-          <a className="link link-hover text-lg text-gray-600">Careers</a>
-          <a className="link link-hover text-lg text-gray-600"> Contact</a>
-        </nav>
-        <nav>
-          <h6 className="footer-title text-lg text-black">Legal</h6>
-          <a className="link link-hover text-lg text-gray-600">Terms of use</a>
-          <a className="link link-hover text-lg text-gray-600">Privacy policy</a>
-          <a className="link link-hover text-lg text-gray-600">Cookie policy</a>
-        </nav>
-      </footer>
+    <div className=" bg-white mt-28" ref={myRef}>
+    <footer class="footer footer-center  rounded p-6">
+  <nav class="grid grid-flow-col gap-4 text-base-content/90">
+    <a href="/about" class="link link-hover text-xl">About</a>
+    <a href="/contact" class="link link-hover text-xl">Contact</a>
+    <a href="/ecoTips" class="link link-hover text-xl">Eco-Tips</a>
+    <a href="#" class="link link-hover text-xl">Policy</a>
+  </nav>
+  <nav>
+    <div class="flex gap-4">
+      <a href="#" class="link link-animated" aria-label="Facebook Link">
+        <span class="icon-[tabler--brand-facebook] size-6"></span>
+      </a>
+      <a href="#" class="link link-animated" aria-label="X Link">
+        <span class="icon-[tabler--brand-x] size-6"></span>
+      </a>
+      <a href="#" class="link link-animated" aria-label="Linkedin Link">
+        <span class="icon-[tabler--brand-linkedin] size-6"></span>
+      </a>
+    </div>
+  </nav>
+  <aside>
+    <p>Copyright © 2024 - All right reserved by FlyonUI</p>
+  </aside>
+</footer>
     </div>
   );
 };
 
-export default Footer;
+export default Footer2;

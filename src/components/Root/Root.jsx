@@ -15,7 +15,7 @@ const Root = () => {
   const [views, setViews] = useState(true);
   const {setViewWallet, setVieProfile, setViewSetting} = useContext(AuthContext)
 
-  
+
   useEffect(() => {
     const loadFlyonui = async () => {
       await import('flyonui/flyonui');
@@ -62,8 +62,8 @@ const Root = () => {
         <title>EcoVenture | Home</title>
       </Helmet>
       <Toaster />
-      <Navbar></Navbar>
       <CursorComponent></CursorComponent>
+      <Navbar></Navbar>
       {views && <Carrousel></Carrousel>}
       <div className="container mx-auto">
         <Outlet></Outlet>

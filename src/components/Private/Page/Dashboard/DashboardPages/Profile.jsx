@@ -75,7 +75,7 @@ const Profile = () => {
     <form
     
       onSubmit={updateProfile}
-      className="md:w-[100%] mx-auto p-12 col-span-2 bg-gray-100 rounded-2xl"
+      className="md:w-[100%] mx-auto p-5 md:p-12 col-span-2 bg-gray-100 rounded-2xl"
     >
       <div className="space-y-6">
         <div>

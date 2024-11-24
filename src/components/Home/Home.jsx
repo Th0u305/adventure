@@ -3,14 +3,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { AuthContext } from "../Context/ContextProvider";
 import { NavLink, useLocation } from "react-router-dom";
-
 import { BiCategory } from "react-icons/bi";
 import { TbListDetails } from "react-icons/tb";
 import { CiMoneyBill } from "react-icons/ci";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { SiLevelsdotfyi } from "react-icons/si";
 import { Helmet } from "react-helmet-async";
-import "flyonui/flyonui"
 
 AOS.init();
 const Home = () => {
@@ -35,7 +33,7 @@ const Home = () => {
         <h1 className="text-3xl lg:text-5xl font-semibold text-center">
           Adventures for Every Explorer
         </h1>
-        <p className=" text-lg lg:text-xl text-center lg:mt-5 p-10">
+        <p className=" text-lg lg:text-xl text-center p-10">
           From serene mangroves to thrilling mountain treks, there's something
           for every traveler.
         </p>

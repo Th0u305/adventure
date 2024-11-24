@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import avatarLogo from "../../../../assets/man.gif";
+import avatarLogo from "../../../../assets/face.gif";
 import {  useNavigate } from "react-router-dom";
 import Money from "./DashboardPages/Money";
 import { AuthContext } from "../../../Context/ContextProvider";
@@ -104,7 +104,6 @@ const Dashboard = () => {
         <h2 className="text-5xl font-bold mb-6 text-center">Dashboard</h2>
         <div className="bg-white grid grid-cols-1 lg:grid-cols-3 p-8 shadow-md rounded-md overflow-hidden gap-5 ">
           <div className="border-2 rounded-2xl pt-12 flex flex-col justify-start items-center mb-12">
-            {/* Profile Picture */}
             <div className="mb-6 text-center">
               <img
                 src={user ? user.photoURL : avatarLogo}

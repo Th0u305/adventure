@@ -14,7 +14,7 @@ const Adventure = () => {
   };
 
   return (
-    <div className="mt-12 xl:mt-28" id="adventure" ref={myRef}>
+    <div className="mt-12 xl:mt-28 xl:mb-28" id="adventure" ref={myRef}>
       <Helmet>
         <title>EcoVenture | Adventure</title>
       </Helmet>
