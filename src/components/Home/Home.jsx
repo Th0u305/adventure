@@ -39,7 +39,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="grid grid-rows-1 md:grid-cols-2 xl:grid-cols-3 gap-12 md:mt-0 mb-5 md:mb-12 p-10 lg:p-15 xl:p-0">
+      <div className="grid grid-rows-1 xl:grid-cols-3 gap-12 md:mt-0 mb-5 md:mb-12 p-10 lg:p-15 xl:p-0">
         {slicedData.map((item) => (
           <div key={item.id} data-aos={item.fade} className="">
             <div className="card group hover:shadow h-full p-8 rounded-3xl">
