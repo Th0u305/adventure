@@ -1,19 +1,17 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../Context/ContextProvider";
+import React from "react";
 import pic1 from "../../assets/pic1.jpg";
 import pic2 from "../../assets/pic2.jpg";
 import pic3 from "../../assets/8.jpg";
 import pic4 from "../../assets/3.jpg";
 import pic5 from "../../assets/pic3.jpg";
-import cursor from "../../assets/cursor.gif"
-import { Carousel } from "flowbite-react";
+
 
 const Carrousel = () => {
   return (
     <div
       id="carousel-7"
       data-carousel='{ "loadingClasses": "opacity-0", "isAutoPlay": true, "speed": 4000 }'
-      class=" w-full h-max md:h-96 lg:h-[30rem] xl:h-[57rem] relative bg-[#0000002f] mt-25 xl:mt-0"
+      className=" w-full h-max md:h-96 lg:h-[30rem] xl:h-[57rem] relative bg-[#0000002f] mt-25 xl:mt-0"
     >
       <div class="carousel h-full rounded-none mix-blend-multiply">
         <div className="container_mouse absolute z-20 left-0 right-0 mx-auto bottom-5 lg:bottom-12 w-fit ">
@@ -22,7 +20,7 @@ const Carrousel = () => {
           </span>
           <span className="text-white">Scroll Down</span>
         </div>
-        <div class="carousel-body opacity-0">
+        <div className="carousel-body opacity-0">
             <img src={pic1} className="object-cover carousel-slide" alt="..." />
             <img src={pic2} className="object-cover carousel-slide" alt="..." />{" "}
             <img src={pic3} className="object-cover carousel-slide" alt="..." />{" "}
