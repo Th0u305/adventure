@@ -123,7 +123,7 @@ const Navbar = () => {
           })
         }
         to="login"
-        className="btn xl:w-36 md:h-10 bg-[#4CAF50] text-lg font-semibold text-white border-none hover:bg-[#2E7D32] hover:scale-110 ease-in-out	duration-300"
+        className="btn md:w-36 md:h-10 bg-[#4CAF50] text-lg font-semibold text-white border-none hover:bg-[#2E7D32] hover:scale-110 ease-in-out	duration-300"
       >
         Login
       </Link>
@@ -131,9 +131,9 @@ const Navbar = () => {
   );
 
   return (
-    <nav id="navbar" className={scrolling ? 'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between h-fit left-0 right-0 transition-all duration-500 shadow' : 
-                     'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between h-fit left-0 right-0 transition-all duration-500 bg-black'}>
-        <div className="navbar-start  justify-between items-center lg:w-auto w-[60%]">
+    <nav id="navbar" className={scrolling ? 'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between left-0 right-0 transition-all duration-500 shadow' : 
+                     'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between left-0 right-0 transition-all duration-500 bg-black'}>
+        <div className="navbar-start justify-between items-center w-[70%] lg:w-[45%] xl:w-1/2">
           <div className="dropdown relative inline-flex lg:hidden rtl:[--placement:bottom-end]">
             <button
               id="dropdown-default"
