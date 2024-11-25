@@ -131,7 +131,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav id="navbar" className={scrolling ?  'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between h-fit left-0 right-0 transition-all duration-500': 
+    <nav id="navbar" className={scrolling ? 'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between h-fit left-0 right-0 transition-all duration-500 shadow' : 
                      'p-[1.3rem] xl:p-[2rem] fixed top-0 z-50 navbar justify-between h-fit left-0 right-0 transition-all duration-500 bg-black'}>
         <div className="navbar-start  justify-between items-center lg:w-auto w-[60%]">
           <div className="dropdown relative inline-flex lg:hidden rtl:[--placement:bottom-end]">
@@ -171,8 +171,8 @@ const Navbar = () => {
       <div className="navbar-center max-lg:hidden">
         <ul className="menu menu-horizontal p-0 font-medium text-lg xl:text-xl bg-inherit">{navMenu}</ul>
       </div>
-      <div className="navbar-end items-center gap-4 w-fit lg:w-fit ">
-        <div className="flex flex-row justify-center items-center gap-2 md:gap-5" href="#">
+      <div className="navbar-end items-center gap-4">
+        <div className="flex flex-row justify-end items-center gap-2 md:gap-5 w-full" href="#">
           {buttonLink}
           <div className="dropdown relative inline-flex [--auto-close:inside] [--offset:8] [--placement:bottom-end]">
             <button
@@ -184,13 +184,13 @@ const Navbar = () => {
               aria-label="Dropdown"
             >
               <div className="avatar">
-                <div className={scrolling ? `size-12 border-2 border-black ${user ? "p-0" : "p-1"} rounded-full` : `size-12 border-2 border-white ${user ? "p-0" : "p-1"} rounded-full`}>
+                <div className={scrolling ? `size-12 border-2 border-black ${user ? "p-0" : "p-2"} rounded-full` : `size-12 border-2 border-white ${user ? "p-0" : "p-2"} rounded-full`}>
                   <img src={user?.photoURL || avatarLogo} className="" alt="avatar 1" />
                 </div>
               </div>
             </button>
             <ul
-              className="dropdown-menu dropdown-open:opacity-100 hidden min-w-52 border-2 border-black"
+              className="dropdown-menu dropdown-open:opacity-100 hidden min-w-52 border-2 border-black "
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="dropdown-avatar"

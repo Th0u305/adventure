@@ -64,7 +64,7 @@ const Login = () => {
   };
 
   return (
-    <div className="font-[sans-serif] p-8" ref={myRef}>
+    <div className="font-[sans-serif] p-8 mt-28 xl:mt-0" ref={myRef}>
       <Helmet>
         <title>EcoVenture | Login</title>
       </Helmet>
